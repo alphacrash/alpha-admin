@@ -13,15 +13,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "issuer", uniqueConstraints = {@UniqueConstraint(columnNames = {"name"})})
+@Table(name = "issuer", uniqueConstraints = {@UniqueConstraint(columnNames = {"issuerName"})})
 public class Issuer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long issuerId;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "issuerName", nullable = false)
+    private String issuerName;
 
-    @Column(name = "address", nullable = false)
-    private String address;
+    @Column(name = "issuerAddress", nullable = false)
+    private String issuerAddress;
 }
