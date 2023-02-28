@@ -24,4 +24,5 @@ public class Issuer {
 
     @Column(name = "issuerAddress", nullable = false)
     private String issuerAddress;
+
 }
